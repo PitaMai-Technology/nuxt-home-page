@@ -1,40 +1,48 @@
 <script setup lang="ts">
-// const externalLinks = [
-//   {
-//     label: 'GitHub',
-//     to: 'https://github.com',
-//     description: 'ソースコードを見る',
-//     icon: 'i-simple-icons-github',
-//     target: '_blank'
-//   },
-//   {
-//     label: 'Twitter',
-//     to: 'https://twitter.com',
-//     description: '最新情報をチェック',
-//     icon: 'i-simple-icons-twitter',
-//     target: '_blank'
-//   }
-// ]
+import type { ContentNavigationItem } from '@nuxt/content';
 
-// デスクトップ用（フィルタリングあり）
-const { navigationItems } = useNavigation(['ホーム', 'About']);
+const headerMenuItems = ref([
+  {
+    label: 'ホーム',
+    icon: 'i-lucide-house',
+    to: '/',
+  },
+  {
+    label: 'GitHub',
+    icon: 'i-simple-icons-github',
+    to: 'https://github.com/nuxt/ui',
+    target: '_blank',
+  },
+]);
+
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation');
 </script>
 
 <template>
   <UHeader class="shadow-sm">
     <template #left>
       <NuxtLink to="/" class="flex items-center gap-2 font-semibold">
-        <span class="text-xl">🚀</span>
-        <span>My Site</span>
+        <img
+          src="/pitamai-only-logo.svg"
+          alt="ピタマイ、PitaMaiロゴ"
+          class="h-12 max-w-full"
+        />
       </NuxtLink>
     </template>
 
     <template #right>
-      <UNavigationMenu :items="navigationItems" class="w-full justify-center" />
+      <PageHeaderMenu :items="headerMenuItems" class="hidden lg:block" />
     </template>
 
     <template #body>
-      <UNavigationMenu :items="navigationItems" orientation="vertical" />
+      <UContentNavigation :navigation="navigation" highlight />
+      <USeparator
+        :avatar="{
+          src: '/pitamai-icon.svg',
+          size: 'xs',
+        }"
+      />
+      <PageHeaderMenu />
     </template>
   </UHeader>
 </template>

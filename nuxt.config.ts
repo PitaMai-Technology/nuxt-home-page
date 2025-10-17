@@ -10,4 +10,10 @@ export default defineNuxtConfig({
     '@nuxt/image',
   ],
   css: ['~/assets/css/main.css'],
+
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://pitamai.com' // 実運用では環境変数で切り替える
+    }
+  }
 })
