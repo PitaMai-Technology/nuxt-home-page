@@ -15,4 +15,10 @@ export default defineNuxtConfig({
   gtag: {
     id: "G-YMJHQ4TNQH",
   },
+
+  runtimeConfig: {
+    public: {
+      siteUrl: 'https://pitamai.com' // 実運用では環境変数で切り替える
+    }
+  }
 });
