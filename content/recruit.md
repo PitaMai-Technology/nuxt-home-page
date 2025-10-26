@@ -11,6 +11,10 @@ navigation:
 このたび、新規プロジェクト「スライドおちば」の開発等を  
 一緒に進めてくれる新しいメンバーを 2名 募集します！
 
+👀少しでも気になると思ったらDiscordへGo!
+
+[https://discord.gg/szxdR8jZbT](https://discord.gg/szxdR8jZbT)
+
 ---
 
 ## ピタマイ・テクノロジー(以下 当団体)について
