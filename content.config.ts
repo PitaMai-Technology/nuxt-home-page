@@ -6,7 +6,7 @@ export default defineContentConfig({
     content: defineCollection(
       asSitemapCollection({
         type: 'page',
-        source: '**/*.md', // Markdownファイルのみ対象
+        source: '**/*.{md,yml,yaml,json,csv}', // supported all files formats
       }),
     ),
   },
