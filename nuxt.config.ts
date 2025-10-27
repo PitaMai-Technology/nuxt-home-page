@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/ui",
+    "@nuxtjs/seo",
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/image",
@@ -20,5 +21,14 @@ export default defineNuxtConfig({
     public: {
       siteUrl: 'https://pitamai.com' // 実運用では環境変数で切り替える
     }
-  }
+  },
+
+  site: {
+    url: "https://pitamai.com",
+    name: "ピタマイ(PitaMai)",
+  },
+
+  sitemap: {
+    xsl: false,
+  },
 });
