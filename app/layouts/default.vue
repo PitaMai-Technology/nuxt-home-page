@@ -1,10 +1,8 @@
 <script setup lang="ts">
-// Nuxt Content v3の正しい関数を使用
 const { data: navigation } = await useAsyncData('navigation', () => {
   return queryCollectionNavigation('content');
 });
 
-// 子コンポーネントに提供
 provide('navigation', navigation);
 </script>
 
@@ -22,5 +20,6 @@ provide('navigation', navigation);
         <slot />
       </UMain>
     </UPage>
+    <PageFooter />
   </div>
 </template>

@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import type { ContentNavigationItem } from "@nuxt/content";
+import type { ContentNavigationItem } from '@nuxt/content';
 
 const headerMenuItems = ref([
   {
-    label: "ホーム",
-    icon: "i-lucide-house",
-    to: "/",
+    label: 'ホーム',
+    icon: 'i-lucide-house',
+    to: '/',
   },
   {
-    label: "GitHub",
-    icon: "i-simple-icons-github",
-    to: "https://github.com/nuxt/ui",
-    target: "_blank",
+    label: 'GitHub',
+    icon: 'i-simple-icons-github',
+    to: 'https://github.com/PitaMai-Technology',
+    target: '_blank',
   },
 ]);
 
-const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation');
 </script>
 
 <template>
