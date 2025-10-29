@@ -1,75 +1,114 @@
-# Nuxt Minimal Starter
+# ピタマイ・テクノロジー 公式サイト
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+ピタマイ・テクノロジーの公式ウェブサイトのソースコードです。
 
-## Setup
+## 技術スタック
 
-Make sure to install dependencies:
+- フレームワーク: Nuxt 4
+- UIライブラリ: Nuxt UI v4
+- スタイリング: Tailwind CSS
+- コンテンツ管理: Nuxt Content v3
+- デプロイ: NuxtHub(beta)
+- パッケージマネージャー: pnpm
+- 開発言語: TypeScript
 
-```bash
-# npm
-npm install
+## プロジェクト構成
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```
+root/
+├── app/                    # アプリケーション本体
+│   ├── components/        # Vueコンポーネント
+│   │   ├── global/       # グローバルコンポーネント
+│   │   ├── PageHeader.vue
+│   │   ├── PageAside.vue
+│   │   └── PageFooter.vue
+│   ├── layouts/          # レイアウト
+│   ├── pages/            # ページコンポーネント
+│   └── assets/           # アセット
+├── content/              # MDC構文コンテンツ
+├── public/              # 公開静的ファイル
+├── nuxt.config.ts      # Nuxt設定
+└── content.config.ts   # コンテンツ設定
 ```
 
-## Development Server
+## 主な機能
 
-Start the development server on `http://localhost:3000`:
+- レスポンシブデザイン
+- SEO最適化（OGP、サイトマップ対応 (NuxtSEO) ）
+- Nuxt Contentによる動的コンテンツ管理
+- Nuxt Studioでも利用可
+- NuxtHubでCloudflareへ簡単にデプロイ
+
+## セットアップ
+
+依存関係のインストール:
 
 ```bash
-# npm
-npm run dev
+pnpm i
+```
 
-# pnpm
+## 開発
+
+開発サーバーを起動（`http://localhost:3000`）:
+
+```bash
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## ビルド
 
-Build the application for production:
+本番用ビルド:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+ビルドのプレビュー:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
 pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## コンテンツ管理
+
+コンテンツは`content/`ディレクトリ内のMarkdownファイルで管理されています。
+
+### 新規ページの追加
+
+1. `content/`ディレクトリに`.md`ファイルを作成
+2. Front-matterでメタデータを設定:
+
+```yaml
+---
+title: ページタイトル
+description: ページの説明
+navigation:
+  title: ナビゲーション表示名
+  icon: i-lucide-icon-name
+---
+```
+
+### ナビゲーションのメニューを変更(ディレクトリ)
+
+`.navigation.yml`を追加
+
+```yaml
+title: 組織
+icon: i-lucide-users-round
+```
+
+## 環境変数
+
+[nuxt.config.ts](nuxt.config.ts)で以下の設定が可能:
+
+- `runtimeConfig.public.siteUrl`: サイトURL（本番環境では環境変数で設定推奨）
+- `gtag.id`: Google Analytics ID
+
+## デプロイ
+
+[NuxtHub](https://hub.nuxt.com/)を使用しています。
+詳しくはドキュメントを参照してください。
+
+## ライセンス
+
+© 2025 PitaMai Technology
