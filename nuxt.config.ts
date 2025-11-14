@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/image",
     "nuxt-gtag",
+    // "nuxt-studio",
   ],
   css: ["~/assets/css/main.css"],
 
@@ -31,4 +32,24 @@ export default defineNuxtConfig({
   sitemap: {
     xsl: false,
   },
+
+  // Nuxt Studio
+  // studio: {
+  //   repository: {
+  //     provider: 'github', // only GitHub is currently supported
+  //     owner: 'your-username', // your GitHub username or organization
+  //     repo: 'your-repo', // your repository name
+  //     branch: 'feat-nuxt-studio', // the branch to commit to (default: main)
+  //     rootDir: '' // optional: if your Nuxt app is in a subdirectory (default: '')
+  //   }
+  // },
+
+  nitro: {
+    prerender: {
+      // Pre-render the homepage
+      routes: ['/'],
+      // Then crawl all the links on the page
+      crawlLinks: true
+    }
+  }
 });
