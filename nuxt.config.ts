@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxtjs/seo",
     "@nuxt/content",
+    "nuxt-studio",
     "@nuxt/eslint",
     "@nuxt/image",
     "nuxt-gtag",
@@ -31,4 +32,24 @@ export default defineNuxtConfig({
   sitemap: {
     xsl: false,
   },
+
+
+  studio: {
+    route: '/admin', // default: '/_studio'
+    repository: {
+      provider: 'github', // only GitHub is currently supported
+      owner: 'PitaMai-Technology', // your GitHub username or organization
+      repo: 'nuxt-home-page', // your repository name
+      branch: 'feat-nuxt-studio', // the branch to commit to (default: main)
+    }
+  },
+
+  nitro: {
+    prerender: {
+      // Pre-render the homepage
+      routes: ['/'],
+      // Then crawl all the links on the page
+      crawlLinks: true
+    }
+  }
 });
