@@ -35,12 +35,12 @@ export default defineNuxtConfig({
 
 
   studio: {
-    route: '/admin', // default: '/_studio'
+    // route: '/nuxt-studio',
     repository: {
       provider: 'github', // only GitHub is currently supported
       owner: 'PitaMai-Technology', // your GitHub username or organization
       repo: 'nuxt-home-page', // your repository name
-      branch: 'feat-nuxt-studio', // the branch to commit to (default: main)
+      branch: 'main', // the branch to commit to (default: main)
     }
   },
 
