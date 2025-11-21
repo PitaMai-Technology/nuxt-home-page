@@ -36,7 +36,7 @@ export default defineNuxtConfig({
 
 
   studio: {
-    // route: '/nuxt-studio',
+    route: '/nuxt-studio',
     repository: {
       provider: 'github', // only GitHub is currently supported
       owner: 'PitaMai-Technology', // your GitHub username or organization
