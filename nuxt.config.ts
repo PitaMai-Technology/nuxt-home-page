@@ -36,6 +36,7 @@ export default defineNuxtConfig({
 
 
   studio: {
+    // 環境変数を追加
     route: '/nuxt-studio',
     repository: {
       provider: 'github', // only GitHub is currently supported
