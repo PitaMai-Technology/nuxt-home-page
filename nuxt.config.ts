@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxtjs/seo",
     "@nuxt/content",
+    "nuxt-studio",
     "@nuxt/eslint",
     "@nuxt/image",
     "nuxt-gtag",
@@ -33,16 +34,16 @@ export default defineNuxtConfig({
     xsl: false,
   },
 
-  // Nuxt Studio
-  // studio: {
-  //   repository: {
-  //     provider: 'github', // only GitHub is currently supported
-  //     owner: 'your-username', // your GitHub username or organization
-  //     repo: 'your-repo', // your repository name
-  //     branch: 'feat-nuxt-studio', // the branch to commit to (default: main)
-  //     rootDir: '' // optional: if your Nuxt app is in a subdirectory (default: '')
-  //   }
-  // },
+
+  studio: {
+    // route: '/nuxt-studio',
+    repository: {
+      provider: 'github', // only GitHub is currently supported
+      owner: 'PitaMai-Technology', // your GitHub username or organization
+      repo: 'nuxt-home-page', // your repository name
+      branch: 'main', // the branch to commit to (default: main)
+    }
+  },
 
   nitro: {
     prerender: {
