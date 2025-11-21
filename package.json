@@ -30,5 +30,10 @@
   "devDependencies": {
     "@nuxt/ui": "4.1.0",
     "prettier": "^3.6.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    }
   }
 }
