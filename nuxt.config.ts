@@ -48,7 +48,7 @@ export default defineNuxtConfig({
 
   hub: {
     database: true
-  }
+  },
 
   nitro: {
     prerender: {
