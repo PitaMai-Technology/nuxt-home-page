@@ -31,7 +31,7 @@ sitemap:
 
 アプリ開発に限らず、メンバー同士が「これ作ってみたいね」と盛り上がったアイデアを、協力しながら形にしていく小規模なコミュニティです。
 
-<https://pitamai.com/>
+[→組織概要←](https://pitamai.com/organization/overview)
 
 ## 主な活動
 
