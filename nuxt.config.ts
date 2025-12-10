@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2025-07-15",
+  compatibilityDate: "2025-12-10",
   devtools: { enabled: true },
 
   modules: [
@@ -46,16 +46,17 @@ export default defineNuxtConfig({
     }
   },
 
-  hub: {
-    database: true
-  },
-
   nitro: {
     prerender: {
       // Pre-render the homepage
       routes: ['/'],
       // Then crawl all the links on the page
       crawlLinks: true
+    },
+    preset: "cloudflare_module",
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true
     }
   }
 });
