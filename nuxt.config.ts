@@ -47,12 +47,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    prerender: {
-      // Pre-render the homepage
-      routes: ['/'],
-      // Then crawl all the links on the page
-      crawlLinks: true
-    },
     preset: "cloudflare_module",
     cloudflare: {
       deployConfig: true,
