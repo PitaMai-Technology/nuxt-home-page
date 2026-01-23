@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/image",
     "nuxt-gtag",
-    // "nuxt-studio",
+    "nuxt-studio",
   ],
   css: ["~/assets/css/main.css"],
 
