@@ -43,7 +43,7 @@ export default defineNuxtConfig({
       owner: 'PitaMai-Technology', // your GitHub username or organization
       repo: 'nuxt-home-page', // your repository name
       branch: 'main', // the branch to commit to (default: main)
-    }
+    },
   },
 
   nitro: {
@@ -64,6 +64,6 @@ export default defineNuxtConfig({
   $production: {
     hub: {
       driver: 'd1-http'
-    }
-  }
+    },
+  },
 });
