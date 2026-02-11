@@ -1,5 +1,5 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
-import { asSitemapCollection } from '@nuxtjs/sitemap/content'
+import { asSitemapCollection, schema as sitemapSchema } from '@nuxtjs/sitemap/content'
 
 export default defineContentConfig({
   collections: {
@@ -7,10 +7,9 @@ export default defineContentConfig({
       asSitemapCollection({
         type: 'page',
         source: '**/*.{md,yml,yaml,json,csv}',
+        // Issue #77: sitemap フィールドを Studio では隠す
         schema: z.object({
-          // Nuxt SEO/Sitemap が注入するフィールドを明示的に除外
-          sitemap: z.any().optional().editor({ hidden: true }),
-          seo: z.any().optional().editor({ hidden: true })
+          sitemap: z.string().editor({ hidden: true })
         })
       })
     )
