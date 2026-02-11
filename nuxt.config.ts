@@ -53,10 +53,7 @@ export default defineNuxtConfig({
       // Then crawl all the links on the page
       crawlLinks: true,
     },
-<<<<<<< HEAD
     preset: 'vercel',
-=======
->>>>>>> 3cd73322eabedc5dd2d7d45855291db00a69b8b1
   },
 
   hub: {
