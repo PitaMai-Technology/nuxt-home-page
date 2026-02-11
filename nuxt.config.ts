@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-12-10",
   devtools: { enabled: true },
 
+  ssr: true,
   modules: [
     "@nuxt/ui",
     "@nuxtjs/seo",
