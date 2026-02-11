@@ -18,6 +18,7 @@
     "@nuxt/image": "^1.11.0",
     "@nuxthub/core": "^0.10.6",
     "@nuxtjs/seo": "^3.4.0",
+    "@nuxtjs/sitemap": "^7.6.0",
     "@unhead/vue": "^2.1.4",
     "better-sqlite3": "^12.6.2",
     "drizzle-kit": "^0.31.9",
