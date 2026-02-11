@@ -1,13 +1,18 @@
-import { defineCollection, defineContentConfig } from '@nuxt/content'
+import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 import { asSitemapCollection } from '@nuxtjs/sitemap/content'
 
 export default defineContentConfig({
   collections: {
-    content: defineCollection(
+    blog: defineCollection(
       asSitemapCollection({
         type: 'page',
-        source: '**/*.{md,yml,yaml,json,csv}', // supported all files formats
-      }),
-    ),
-  },
+        source: 'blog/*.md',
+        schema: z.object({
+          // Nuxt SEO/Sitemap が注入するフィールドを明示的に除外
+          sitemap: z.any().optional().editor({ hidden: true }),
+          seo: z.any().optional().editor({ hidden: true })
+        })
+      })
+    )
+  }
 })
