@@ -7,9 +7,9 @@ export default defineContentConfig({
       asSitemapCollection({
         type: 'page',
         source: '**/*.{md,yml,yaml,json,csv}',
-        // schema: z.object({
-        //   Seo: property(z.string()).editor({ hidden: true }),
-        // })
+        schema: z.object({
+          Seo: property(z.string()).editor({ hidden: true }),
+        })
       })
     )
   }
