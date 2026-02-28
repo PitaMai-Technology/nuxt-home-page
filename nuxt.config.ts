@@ -45,6 +45,7 @@ export default defineNuxtConfig({
       repo: 'nuxt-home-page', // your repository name
       branch: 'main', // the branch to commit to (default: main)
     },
+    dev: true
   },
 
   nitro: {
