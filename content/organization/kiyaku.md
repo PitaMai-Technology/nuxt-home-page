@@ -1,8 +1,8 @@
 ---
 title: 定款(運営規約)
-description: https://outline-wiki.pitamai.com/s/244c793e-3bb6-4598-9ce4-ffde81004dfc
+description: https://wiki.pitamai.com/s/1b2c1cf4-6bb5-4033-83dd-4b4141387b5e
 ---
 
 # ドキュメントURL
 
-<https://outline-wiki.pitamai.com/s/244c793e-3bb6-4598-9ce4-ffde81004dfc>
+<https://wiki.pitamai.com/s/1b2c1cf4-6bb5-4033-83dd-4b4141387b5e>
