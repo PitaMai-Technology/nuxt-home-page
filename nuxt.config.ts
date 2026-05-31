@@ -56,15 +56,4 @@ export default defineNuxtConfig({
       crawlLinks: true,
     },
   },
-
-  hub: {
-    db: {
-      dialect: 'sqlite',
-    }
-  },
-  $production: {
-    hub: {
-      driver: 'd1-http'
-    },
-  },
 });

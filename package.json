@@ -12,29 +12,28 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@libsql/client": "^0.15.15",
-    "@nuxt/content": "^3.12.0",
+    "@nuxt/content": "^3.14.0",
     "@nuxt/eslint": "^1.15.2",
     "@nuxt/image": "^1.11.0",
-    "@nuxthub/core": "^0.10.7",
     "@nuxtjs/seo": "^3.4.0",
     "@nuxtjs/sitemap": "^7.6.0",
-    "@unhead/vue": "^2.1.12",
-    "better-sqlite3": "^12.8.0",
-    "drizzle-kit": "^0.31.10",
-    "drizzle-orm": "^0.45.2",
-    "eslint": "^9.39.4",
-    "nuxt": "^4.4.2",
-    "nuxt-gtag": "4.1.0",
-    "nuxt-studio": "1.4.0",
+    "@unhead/vue": "^2.1.15",
+    "better-sqlite3": "^12.10.0",
+    "nuxt": "^4.4.6",
+    "nuxt-gtag": "^4.1.0",
+    "nuxt-studio": "^1.7.0",
     "typescript": "^5.9.3",
     "unstorage": "^1.17.5",
-    "vue": "^3.5.31",
+    "vue": "^3.5.35",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
+    "eslint": "^9.39.4",
     "@nuxt/ui": "4.1.0",
     "eslint-config-prettier": "^10.1.8",
-    "prettier": "^3.8.1"
-  }
+    "prettier": "^3.8.3"
+  },
+  "workspaces": [
+    "."
+  ]
 }
